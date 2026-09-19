@@ -1,0 +1,276 @@
+/* ================================================================
+   1) CORES E TIPOGRAFIA CONSISTENTES
+   Paleta e fonte únicas, reutilizadas em todo o site via variáveis.
+================================================================ */
+:root {
+  /* cores */
+  --color-bg: #EFF3F2;
+  --color-surface: #FFFFFF;
+  --color-navy: #16324F;
+  --color-accent: #E3A72C;
+  --color-text: #23282D;
+  --color-text-muted: #4A5560;
+  --color-border: #DCE3E1;
+ 
+  /* tipografia */
+  --font-base: "Arial", "Helvetica", sans-serif;
+  --fs-h1: 1.6rem;
+  --fs-h2: 1.6rem;
+  --fs-h3: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9rem;
+  --line-height-base: 1.6;
+ 
+  /* espaçamento (escala fixa, reutilizada em todo o site) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+ 
+h1, h2, h3 {
+  font-family: var(--font-base);
+  color: var(--color-navy);
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.3;
+}
+ 
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+ 
+p {
+  margin: 0 0 var(--space-sm) 0;
+}
+ 
+a {
+  color: var(--color-navy);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+ 
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+ 
+li {
+  margin-bottom: var(--space-xs);
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
+ 
+ 
+/* ================================================================
+   2) ESPAÇAMENTO ORGANIZADO E ORGANIZAÇÃO VISUAL ADEQUADA
+   Todas as seções seguem o mesmo ritmo de espaçamento e largura máxima.
+================================================================ */
+section {
+  padding: var(--space-xl) var(--space-md);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+.hero,
+.card,
+.recursos__lista li {
+  background-color: var(--color-surface);
+  border-radius: 8px;
+}
+ 
+.hero {
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+ 
+.hero p,
+.problema p {
+  color: var(--color-text-muted);
+}
+ 
+ 
+/* ================================================================
+   3) FLEXBOX OBRIGATÓRIO
+   Usado no cabeçalho, nos cards de orientação, na lista de recursos
+   e no rodapé — organiza o layout em todas as seções principais.
+================================================================ */
+ 
+/* Cabeçalho */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-navy);
+}
+ 
+.topbar__title {
+  color: #FFFFFF;
+  margin: 0;
+}
+ 
+.nav {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+ 
+.nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+ 
+/* Cards de orientação */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+ 
+.card {
+  flex: 1 1 260px;
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+ 
+.card p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+}
+ 
+.card ul {
+  font-size: var(--fs-small);
+}
+ 
+/* Lista de recursos úteis */
+.recursos__lista {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+ 
+.recursos__lista li {
+  border: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-md);
+}
+ 
+.recursos__lista a {
+  font-weight: bold;
+}
+ 
+/* Rodapé */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+}
+ 
+.footer p {
+  margin: 0;
+  font-size: var(--fs-small);
+}
+ 
+.footer a {
+  color: var(--color-accent);
+}
+ 
+ 
+/* ================================================================
+   4) EFEITOS SIMPLES DE HOVER
+   Aplicados em todos os elementos clicáveis do site.
+================================================================ */
+a:hover {
+  color: var(--color-accent);
+}
+ 
+.nav a:hover {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
+}
+ 
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+ 
+.recursos__lista a:hover {
+  color: var(--color-accent);
+}
+ 
+.footer a:hover {
+  color: #FFFFFF;
+}
+ 
+ 
+/* ================================================================
+   5) LAYOUT RESPONSIVO
+   Dois pontos de quebra: tablet (768px) e celular (480px).
+================================================================ */
+@media (max-width: 768px) {
+  section {
+    padding: var(--space-lg) var(--space-sm);
+  }
+ 
+  .card {
+    flex: 1 1 45%;
+  }
+}
+ 
+@media (max-width: 480px) {
+  :root {
+    --fs-h1: 1.35rem;
+    --fs-h2: 1.35rem;
+    --fs-h3: 1.05rem;
+  }
+ 
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .card {
+    flex: 1 1 100%;
+  }
+ 
+  .footer {
+    flex-direction: column;
+    text-align: left;
+  }
+}
