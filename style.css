@@ -1,9 +1,5 @@
-/* ================================================================
-   1) CORES E TIPOGRAFIA CONSISTENTES
-   Paleta e fonte únicas, reutilizadas em todo o site via variáveis.
-================================================================ */
 :root {
-  /* cores */
+ 
   --color-bg: #EFF3F2;
   --color-surface: #FFFFFF;
   --color-navy: #16324F;
@@ -12,7 +8,7 @@
   --color-text-muted: #4A5560;
   --color-border: #DCE3E1;
  
-  /* tipografia */
+  
   --font-base: "Arial", "Helvetica", sans-serif;
   --fs-h1: 1.6rem;
   --fs-h2: 1.6rem;
@@ -21,7 +17,7 @@
   --fs-small: 0.9rem;
   --line-height-base: 1.6;
  
-  /* espaçamento (escala fixa, reutilizada em todo o site) */
+  
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -82,10 +78,7 @@ img {
 }
  
  
-/* ================================================================
-   2) ESPAÇAMENTO ORGANIZADO E ORGANIZAÇÃO VISUAL ADEQUADA
-   Todas as seções seguem o mesmo ritmo de espaçamento e largura máxima.
-================================================================ */
+
 section {
   padding: var(--space-xl) var(--space-md);
   max-width: 1100px;
@@ -110,13 +103,9 @@ section {
 }
  
  
-/* ================================================================
-   3) FLEXBOX OBRIGATÓRIO
-   Usado no cabeçalho, nos cards de orientação, na lista de recursos
-   e no rodapé — organiza o layout em todas as seções principais.
-================================================================ */
+
  
-/* Cabeçalho */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -146,7 +135,7 @@ section {
   border-bottom: 2px solid transparent;
 }
  
-/* Cards de orientação */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +162,7 @@ section {
   font-size: var(--fs-small);
 }
  
-/* Lista de recursos úteis */
+
 .recursos__lista {
   list-style: none;
   padding-left: 0;
@@ -191,7 +180,7 @@ section {
   font-weight: bold;
 }
  
-/* Rodapé */
+
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -212,10 +201,7 @@ section {
 }
  
  
-/* ================================================================
-   4) EFEITOS SIMPLES DE HOVER
-   Aplicados em todos os elementos clicáveis do site.
-================================================================ */
+
 a:hover {
   color: var(--color-accent);
 }
@@ -239,10 +225,7 @@ a:hover {
 }
  
  
-/* ================================================================
-   5) LAYOUT RESPONSIVO
-   Dois pontos de quebra: tablet (768px) e celular (480px).
-================================================================ */
+
 @media (max-width: 768px) {
   section {
     padding: var(--space-lg) var(--space-sm);
